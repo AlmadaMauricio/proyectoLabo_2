@@ -1,5 +1,5 @@
 #pragma once
-class Fecha
+class Fecha 
 {
 private:
 	int _dia;
