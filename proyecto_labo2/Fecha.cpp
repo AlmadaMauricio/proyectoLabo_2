@@ -32,3 +32,23 @@ int Fecha ::getMes() {
 int Fecha::getAnio() {
 	return _anio;
 }
+
+void Fecha::Cargar(int, int, int)
+{
+	cout << "Dia: ";
+	cin >> _dia;
+	cout << "Mes: ";
+	cin >> _mes;
+	cout << "Anio: ";
+	cin >> _anio;
+}
+
+void Fecha::Mostrar()
+{
+	cout << "Dia: ";
+	cout << _dia << endl;
+	cout << "Mes: ";
+	cout << _mes << endl;
+	cout << "Anio: ";
+	cout << _anio << endl;
+}
