@@ -1,5 +1,4 @@
 #pragma once
-
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
@@ -48,4 +47,3 @@ public:
 	void mostrarDomicilio();
 
 };
-
