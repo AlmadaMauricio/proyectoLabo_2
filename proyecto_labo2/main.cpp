@@ -5,8 +5,7 @@ using namespace std;
 int main()
 {
 
-	Fecha obj;
-	obj.Cargar(int, int, int);
+	
 
 
 	system("pause");

@@ -3,6 +3,18 @@
 
 using namespace std;
 
+/// Constructor
+Fecha::Fecha() {
+	time_t rawtime;
+	struct tm* timeinfo;
+
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+	_dia = timeinfo->tm_mday;
+	_mes = timeinfo->tm_mon + 1;
+	_anio = timeinfo->tm_year + 1900;
+}
+
 Fecha::Fecha(int dia, int mes, int anio) {
 	_dia = dia;
 	_mes = mes;
@@ -31,6 +43,29 @@ int Fecha ::getMes() {
 
 int Fecha::getAnio() {
 	return _anio;
+}
+
+bool Fecha::operator> (Fecha aux)
+{
+	if (_anio < aux.getAnio())
+	{
+		return false;
+	}
+
+	if (_mes < aux.getMes())
+	{
+		return false;
+	}
+
+	if (_dia < aux.getDia())
+	{
+		return false;
+
+	}
+	else
+	{
+		return true;
+	}
 }
 
 void Fecha::Cargar(int, int, int)

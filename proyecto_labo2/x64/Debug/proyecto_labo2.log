@@ -1,4 +1,8 @@
-﻿  Fecha.cpp
+﻿  Administrador.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
   main.cpp
+  Pais.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  Persona.cpp
   Generando código...
-  proyecto_labo2.vcxproj -> C:\Users\escal\Documents\Labo 2\VS\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
+  proyecto_labo2.vcxproj -> C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
