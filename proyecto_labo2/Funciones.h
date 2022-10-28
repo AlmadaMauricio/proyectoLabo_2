@@ -12,6 +12,7 @@ bool menuPrincipal();
 void mostrarLogo();
 void animacion();
 void mostrarIntegrantes();
+void mostrarLeyenda();
 
 
 #endif // FUNCIONES_H_INCLUDED

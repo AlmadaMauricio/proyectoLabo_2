@@ -20,6 +20,7 @@ bool login()
 	int aux;
 	bool flag = false;
 	bool flag2 = false;
+	bool flag3 = false;
 	int pos = 0;
 	string aux2;
 	string password;
@@ -83,12 +84,13 @@ bool login()
 					setColor(WHITE);
 					locate(1, 1);
 					cont++;
+					cls();
 				}
 				else
 				{
 					locate(4, 6);
 					setColor(LIGHTGREEN);
-					setBackgroundColor(GREEN);
+					//setBackgroundColor(GREEN);
 					cout << "ID y Contraseña correctos." << endl;
 					locate(11, 7);
 					cout << "¡Bienvenido al Sistema Monopatigres!" << endl << endl;
@@ -100,6 +102,7 @@ bool login()
 
 				}
 			}
+		
 
 			if (cont == 3)
 			{
@@ -109,9 +112,9 @@ bool login()
 				cout << endl << "\t-- Ha superado el límite de intentos. Contacte al administrador. --" << endl;
 				anykey();
 
-				setColor(WHITE);
-				setBackgroundColor(BLUE);
-				setColor(WHITE);
+				setColor(CYAN);
+				setBackgroundColor(BLACK);
+				setColor(CYAN);
 				cls();
 				login();
 
@@ -133,20 +136,20 @@ bool login()
 		}
 		
 
-	} while (!flag);
+	} while (!flag2);
 
 	return true;
 }
 
 bool menuPrincipal() {
-	setBackgroundColor(DARKGREY);
+	setBackgroundColor(BLACK);
 
 	int opcion;
 	char confirmarSalida;
 	bool salir = false;
 
 	while (!salir) {
-		setColor(WHITE);
+		setColor(CYAN);
 		cls();
 		cout << "\t Sistema de Gestión Monopatigres" << endl;
 		cout << "-------------------------------" << endl;
@@ -225,26 +228,29 @@ void mostrarIntegrantes() {
 	system("pause");
 }
 void mostrarLogo() {
-	setBackgroundColor(BLUE);
 	animacion();
 	for (int i = 0; i < 3; i++)
+
+
 	{
 		setColor(CYAN);
 		locate(16, 1);
-		cout << "    " << endl;
+		cout << "     ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____" << endl;
 		animacion();
 		locate(16, 2);
-		cout << "   " << endl;
+		cout << "    || M|||O |||N |||O |||P |||A |||T |||I |||G |||R |||E |||S || " << endl;
 		animacion();
 		locate(16, 3);
-		cout << "   " << endl;
+		cout << "    ||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|| " << endl;
 		animacion();
 		locate(16, 4);
-		cout << "  " << endl;
+		cout << "    |/__/|/__/|/__/|/__/|/__/|/__/|/__/|/__/|/__/|/__/|/__/|/__|| " << endl;
 		animacion();
-		locate(16, 5);
-		cout << "" << endl;
-		animacion();
+
+	}
+}
+
+	void mostrarLeyenda(){
 
 		locate(16, 8);
 		cout << "Sistema de Gestión desarrollado por el equipo Monopatigres" << endl;
@@ -252,11 +258,6 @@ void mostrarLogo() {
 		cout << "Para la materia Laboratorio II de la Carrera Técnico Universitario en Programación " << endl;
 
 	}
-
-
-	mostrarIntegrantes();
-
-}
 
 void animacion()
 {

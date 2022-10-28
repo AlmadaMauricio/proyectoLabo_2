@@ -16,8 +16,14 @@ int main()
 	bool flag = false;
 	bool flag2 = false;
 
-	
+	mostrarLogo();
+	mostrarLeyenda();
+	mostrarIntegrantes();
 
+	cout << endl;
+	cls();
+	mostrarLogo();
+	cout << endl;
 	do
 	{
 		flag = login();
@@ -30,8 +36,8 @@ int main()
 	} while (flag && flag2);
 
 	
-
-	menuPrincipal();
+	
+	
 	
 	return 0;
 }
