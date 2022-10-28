@@ -1,4 +1,8 @@
-﻿  Domicilio.cpp
-  Monopatin.cpp
-  Generando código...
+﻿  Administrador.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(86,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(224,61): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(244,60): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(264,61): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(322,42): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
   proyecto_labo2.vcxproj -> C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
