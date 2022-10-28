@@ -150,6 +150,7 @@ bool Monopatin::LeerDeDisco(int pos) {
     return leyo;
 }
 
+
 bool validaIdMonopatin(int id) {
     Monopatin m;
     int pos = 0;

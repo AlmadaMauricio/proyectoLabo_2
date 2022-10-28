@@ -23,5 +23,8 @@ public:
 	bool GrabarEnDisco();
 	bool LeerDeDisco(int);
 };
+	bool validaIdMonopatin(int);
+	bool validaModelo(char* modelo);
+	bool validaNumSerie(int);
 
 
