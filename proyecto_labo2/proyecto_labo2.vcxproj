@@ -131,6 +131,7 @@
     <ClCompile Include="Domicilio.cpp" />
     <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Monopatin.cpp" />
     <ClCompile Include="Pais.cpp" />
     <ClCompile Include="Persona.cpp" />
   </ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="Administrador.h" />
     <ClInclude Include="Domicilio.h" />
     <ClInclude Include="Fecha.h" />
+    <ClInclude Include="Monopatin.h" />
     <ClInclude Include="Pais.h" />
     <ClInclude Include="Persona.h" />
   </ItemGroup>
