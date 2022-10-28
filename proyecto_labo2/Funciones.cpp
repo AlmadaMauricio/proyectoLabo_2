@@ -28,83 +28,110 @@ bool login()
 	Administrador admin;
 
 	do {
+		int opcion;
+		char confirmarSalida;
+		bool salir = false;
+
 		setColor(CYAN);
 		cout << "    Bienvenido al Sistema MONOPATIGRES" << endl;
-		cout << "    --------------------------" << endl;
-		cout << "    ID Administrador: " << endl;
-		cout << "    Contraseña: " << endl;
-		cout << "    --------------------------" << endl;
+		cout << "    Ingrese 1: Si usted ya tiene usuario admin y contraseña" << endl;
+		cout << "    Ingrese 2: Para generar un nuevo usuario admin" << endl;
+		cout << endl;
+		cout << "Opción: ";
+		cin >> opcion;
+		cls();
 
-		locate(23, 3);
-		cin >> aux;
+		switch (opcion) {
+		case 1:
+			cout << "    Bienvenido al Sistema MONOPATIGRES" << endl;
+			cout << "    --------------------------" << endl;
+			cout << "    ID Administrador: " << endl;
+			cout << "    Contraseña: " << endl;
+			cout << "    --------------------------" << endl;
 
-		pos = buscarAdministradorPorID(aux);
+			locate(23, 3);
+			cin >> aux;
 
-		if (pos == -1)
-		{
-			cls();
-			setColor(RED);
-			locate(11, 6);
-			cout << "ID incorrecto." << endl;
-			flag = false;
-			setColor(WHITE);
-			setBackgroundColor(CYAN);
-			locate(1, 1);
-		}
-		else
-		{	
-			locate(17, 4);
-			admin.leerDeDisco(pos);
-			password = admin.getContrasenia();
+			pos = buscarAdministradorPorID(aux);
 
-			aux2 = pedirContrasenia();
-
-			if (aux2 != password)
+			if (pos == -1)
 			{
 				cls();
-				locate(8, 6);
 				setColor(RED);
-				cout << "Contraseña incorrecta." << endl;
+				locate(11, 6);
+				cout << "ID incorrecto." << endl;
 				flag = false;
 				setColor(WHITE);
+				setBackgroundColor(CYAN);
 				locate(1, 1);
-				cont++;
 			}
 			else
 			{
-				locate(4, 6);
-				setColor(LIGHTGREEN);
-				setBackgroundColor(GREEN);
-				cout << "ID y Contraseña correctos." << endl;
-				locate(11, 7);
-				cout << "¡Bienvenido al Sistema Monopatigres!" << endl << endl;
-				setColor(WHITE);
-				setBackgroundColor(CYAN);
-				system("PAUSE");
+				locate(17, 4);
+				admin.leerDeDisco(pos);
+				password = admin.getContrasenia();
+
+				aux2 = pedirContrasenia();
+
+				if (aux2 != password)
+				{
+					cls();
+					locate(8, 6);
+					setColor(RED);
+					cout << "Contraseña incorrecta." << endl;
+					flag = false;
+					setColor(WHITE);
+					locate(1, 1);
+					cont++;
+				}
+				else
+				{
+					locate(4, 6);
+					setColor(LIGHTGREEN);
+					setBackgroundColor(GREEN);
+					cout << "ID y Contraseña correctos." << endl;
+					locate(11, 7);
+					cout << "¡Bienvenido al Sistema Monopatigres!" << endl << endl;
+					setColor(WHITE);
+					setBackgroundColor(CYAN);
+					system("PAUSE");
+					cls();
+					return true;
+
+				}
+			}
+
+			if (cont == 3)
+			{
 				cls();
-				return true;
+				setBackgroundColor(RED);
+				setColor(YELLOW);
+				cout << endl << "\t-- Ha superado el límite de intentos. Contacte al administrador. --" << endl;
+				anykey();
+
+				setColor(WHITE);
+				setBackgroundColor(BLUE);
+				setColor(WHITE);
+				cls();
+				login();
+
+				return false;
+
 
 			}
+			break;
+		case 2:
+			crear_nuevo_admin();
+				break;
+			case 0:
+				cout << "¿Confirma salir? (S/N) ";
+				cin >> confirmarSalida;
+
+				salir = (tolower(confirmarSalida) == 's');
+				return false;
+				break;
 		}
-
-		if (cont == 3)
-		{
-			cls();
-			setBackgroundColor(RED);
-			setColor(YELLOW);
-			cout << endl << "\t-- Ha superado el límite de intentos. Contacte al administrador. --" << endl;
-			anykey();
-
-			setColor(WHITE);
-			setBackgroundColor(BLUE);
-			setColor(WHITE);
-			cls();
-			login();
-
-			return false;
-
-
-		}
+		
 
 	} while (!flag);
 

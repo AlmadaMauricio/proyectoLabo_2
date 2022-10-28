@@ -16,7 +16,7 @@ int main()
 	bool flag = false;
 	bool flag2 = false;
 
-	/*
+	
 
 	do
 	{
@@ -29,7 +29,7 @@ int main()
 
 	} while (flag && flag2);
 
-	*/
+	
 
 	menuPrincipal();
 	

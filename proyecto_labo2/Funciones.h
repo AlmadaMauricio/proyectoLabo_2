@@ -1,11 +1,9 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
-//void instalacionArchivos();
 
 bool login();
 
-void todoAMayus(char*);
 
 /// Menu
 bool menuPrincipal();
