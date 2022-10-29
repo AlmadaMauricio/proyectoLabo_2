@@ -1,3 +1,2 @@
-﻿  main.cpp
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-  proyecto_labo2.vcxproj -> C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
+﻿  Renta.cpp
+  proyecto_labo2.vcxproj -> C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe

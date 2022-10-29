@@ -135,6 +135,7 @@
     <ClCompile Include="Monopatin.cpp" />
     <ClCompile Include="Pais.cpp" />
     <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="Renta.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Administrador.h" />
@@ -144,6 +145,7 @@
     <ClInclude Include="Monopatin.h" />
     <ClInclude Include="Pais.h" />
     <ClInclude Include="Persona.h" />
+    <ClInclude Include="Renta.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

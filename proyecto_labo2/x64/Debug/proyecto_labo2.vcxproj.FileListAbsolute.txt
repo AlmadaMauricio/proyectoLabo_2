@@ -1,2 +1,3 @@
 C:\Users\escal\Documents\Labo 2\VS\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
 C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
