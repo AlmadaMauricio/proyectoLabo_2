@@ -76,7 +76,7 @@ void Renta::Cargar()
 	cout << "Monopatin a utilizar: ";
 	_monopatinAusar.Cargar();
 	cout << "Fecha de Renta: ";
-	_fechaRenta.Cargar(dia, mes, anio);
+	_fechaRenta.cargarFecha();
 }
 
 void Renta::Mostrar()
@@ -88,7 +88,7 @@ void Renta::Mostrar()
 	cout << "Monopatin a utilizar: ";
 	_monopatinAusar.Mostrar();
 	cout << "Fecha de Renta: ";
-	_fechaRenta.Mostrar();
+	_fechaRenta.mostrarFecha();
 }
 
 bool Renta::GrabarEnDisco()

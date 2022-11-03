@@ -212,6 +212,18 @@ bool menuPrincipal() {
 	}
 	return true;
 }
+
+void todoAMayus(char* apellido)
+{
+
+	int len = strlen(apellido);
+
+	for (int i = 0; i < len; i++)
+	{
+		apellido[i] = toupper(apellido[i]);
+	}
+}
+
 void mostrarIntegrantes() {
 	locate(25, 10);
 	cout << "UTN - Universidad Tecnológica Nacional - FRGP" << endl;

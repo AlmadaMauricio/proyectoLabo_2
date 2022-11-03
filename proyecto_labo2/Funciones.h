@@ -3,6 +3,7 @@
 
 
 bool login();
+void todoAMayus(char*);
 
 
 /// Menu

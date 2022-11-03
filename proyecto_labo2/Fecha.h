@@ -1,27 +1,38 @@
 #pragma once
-class Fecha 
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Fecha
 {
 private:
-	int _dia;
-	int _mes;
-	int _anio;
+	int _dia, _mes, _anio;
+
 public:
+
+	///Constructor
 	Fecha();
-	Fecha(int, int, int);
 
-	int getDia();
-	int getMes();
-	int getAnio();
-
-	bool operator>(Fecha aux);
-
+	///Setters
 	void setDia(int dia);
 	void setMes(int mes);
 	void setAnio(int anio);
 
-	void Cargar(int, int, int);
-	void Mostrar();
+	///Getters
+	int getDia();
+	int getMes();
+	int getAnio();
 
+	void cargarFecha();
+	void mostrarFecha();
+	string toString();
 
+	void cargarFechaConsultas();
+
+	bool operator>(Fecha aux);
+	bool operator== (Fecha aux);
 };
 
+bool validaDia(int mes, int dia, int anio);
