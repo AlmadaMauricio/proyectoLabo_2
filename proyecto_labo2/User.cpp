@@ -484,7 +484,7 @@ void baja_user()
 
 		if (confirm == 's')
 		{
-
+			//VER CLASE MONOPATIN
 			//eliminar_monopatines_user(id);
 			//eliminar_rentas_pendientes(id);
 			aux.setEstado(false);
