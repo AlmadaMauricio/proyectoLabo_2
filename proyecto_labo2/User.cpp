@@ -1132,7 +1132,7 @@ void backup_users()
 		aux.grabarBackupUsers();
 	}
 
-	cout << "Archivo de backup de socios 'backupUsers.dat' grabado correctamente" << endl;
+	cout << "Archivo de backup de Users 'backupUsers.dat' grabado correctamente" << endl;
 }
 
 //PRUEBA GITHUB
