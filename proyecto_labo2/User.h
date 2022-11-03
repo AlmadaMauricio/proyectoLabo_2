@@ -7,8 +7,6 @@ class User : public Persona
 protected:
 	Fecha _fechaIngreso;
 	int _iduser;
-	Fecha _UltimoPago;
-	bool _deudor;
 	bool _estado;
 
 public:
@@ -17,15 +15,13 @@ public:
 	void setIduser(int iduser);
 	void setEstado(bool estado);
 	void setFechaIngreso(Fecha fechaIng);
-	void setDeudor(bool d);
-	void setUltimoPago(Fecha pago);
+
 
 	///Getters
 	Fecha getFechaIngreso();
 	int getIduser();
 	bool getEstado();
-	bool getDeudor();
-	Fecha getUltimoPago();
+
 
 	// METODOS DE DISCO
 	bool grabarEnDisco();

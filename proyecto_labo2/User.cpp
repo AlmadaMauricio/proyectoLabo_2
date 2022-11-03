@@ -14,7 +14,6 @@ User::User() {
 
 	Persona();
 	Fecha _fechaIngreso;
-	_deudor = false;
 	_iduser = 0;
 	_estado = false;
 }
@@ -32,16 +31,6 @@ void User::setFechaIngreso(Fecha fechaIng)
 	_fechaIngreso = fechaIng;
 }
 
-void User::setDeudor(bool d)
-{
-	_deudor = d;
-}
-
-void User::setUltimoPago(Fecha pago)
-{
-	_UltimoPago = pago;
-}
-
 int	 User::getIduser() {
 	return _iduser;
 }
@@ -55,15 +44,7 @@ bool User::getEstado() {
 	return _estado;
 }
 
-bool User::getDeudor()
-{
-	return _deudor;
-}
 
-Fecha User::getUltimoPago()
-{
-	return _UltimoPago;
-}
 
 //METODOS DE DISCO
 bool User::grabarEnDisco() {
@@ -183,20 +164,8 @@ void User::cargar() {
 
 	this->setIduser(generarIDUser() + 1);
 
-	this->setUltimoPago(fechaActual);
-
-	this->setDeudor(false);
-
 	this->setEstado(true);
-	/*
-	int idCuota = generarIDCuota() + 1;
-
-	float valorCuota = getUltimoPrecioCuota();
-
-	PagoCuota cuotaInicial(this->getIduser(), valorCuota, idCuota);
-
-	cout << endl << " -- Valor de cuota a pagar: $ " << valorCuota << " --" << endl;
-	*/
+	
 	do
 	{
 		cout << endl << "Ingrese el ID de administrador actual: ";
@@ -215,11 +184,9 @@ void User::cargar() {
 
 			if (pos > -1) {
 				admin.leerDeDisco(pos);
-				/*
-				cuotaInicial.setIdAdmin(admin.getIdAdmin());
-				cuotaInicial.grabarEnDisco();
-				flag2 = true;
-				*/
+				
+				/// Agregar la validación
+				
 			}
 			else
 			{
@@ -246,9 +213,6 @@ void User::mostrar() {
 	_fechaIngreso.mostrarFecha();
 	MostrarPersona();
 	cout << endl;
-	cout << "Fecha de último pago: ";
-	_UltimoPago.mostrarFecha();
-
 }
 
 void User::mostrarSimplificado()
@@ -263,13 +227,7 @@ void User::mostrarSimplificado()
 		cout << setw(20) << this->getApellido();
 		cout << setw(20) << this->getNombre();
 		cout << setw(20);
-		if (this->getDeudor()) { cout << "ADEUDA"; }
-		else { cout << "AL DIA"; }
-		cout << setw(20);
-		this->getUltimoPago().mostrarFecha();
-		cout << setw(11) << " ";
-		this->getFechaIngreso().mostrarFecha();
-		cout << endl;
+		
 	}
 
 }
@@ -283,8 +241,6 @@ void User::listar() {
 	cout << setw(20) << this->getApellido();
 	cout << setw(20);
 
-	if (this->getDeudor()) { cout << "    ADEUDA"; }
-	else { cout << "    AL DIA"; }
 
 	this->getFechaIngreso().mostrarFecha();
 	cout << endl;

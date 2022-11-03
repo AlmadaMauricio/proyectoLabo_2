@@ -269,7 +269,7 @@ bool Administrador::modificarEnDisco(int pos)
 }
 
 // Funciones globales Administrador
-/////////////////////////////////////
+
 
 
 int buscarAdministradorPorDni(int DNI)
