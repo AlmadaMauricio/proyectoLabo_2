@@ -200,7 +200,7 @@ void User::cargar() {
 
 	this->grabarEnDisco();
 
-	cout << endl << " -- Socio creado correctamente --" << endl << endl;
+	cout << endl << " -- User creado correctamente --" << endl << endl;
 
 	this->mostrar();
 
@@ -208,7 +208,7 @@ void User::cargar() {
 
 void User::mostrar() {
 
-	cout << "ID de socio: " << this->getIduser() << endl;
+	cout << "ID de user: " << this->getIduser() << endl;
 	cout << "Fecha de ingreso: ";
 	_fechaIngreso.mostrarFecha();
 	MostrarPersona();

@@ -1,10 +1,10 @@
 ﻿  User.cpp
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\User.cpp(60,52): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\User.cpp(77,52): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\User.cpp(96,51): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\User.cpp(116,51): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\User.cpp(135,52): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\User.cpp(154,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\User.cpp(846,33): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-  proyecto_labo2.vcxproj -> C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\User.cpp(60,52): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\User.cpp(77,52): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\User.cpp(96,51): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\User.cpp(116,51): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\User.cpp(135,52): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\User.cpp(154,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\User.cpp(846,33): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  proyecto_labo2.vcxproj -> C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
