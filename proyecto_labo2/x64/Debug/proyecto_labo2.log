@@ -1,4 +1,8 @@
-﻿  Renta.cpp
+﻿  PagoRenta.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\PagoRenta.cpp(57,57): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\PagoRenta.cpp(75,56): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Renta.cpp
 C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Renta.cpp(105,55): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
 C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Renta.cpp(127,51): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Generando código...
   proyecto_labo2.vcxproj -> C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
