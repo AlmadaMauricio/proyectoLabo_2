@@ -1,2 +1,22 @@
-﻿  Renta.cpp
-  proyecto_labo2.vcxproj -> C:\Users\Mauricio\Documents\GitHub_repos\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
+﻿  Administrador.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(86,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(224,61): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(244,60): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(264,61): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Administrador.cpp(322,42): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Domicilio.cpp
+  Fecha.cpp
+  Funciones.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  main.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  Monopatin.cpp
+  Pais.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\rlutil.h(577,32): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  Persona.cpp
+  Renta.cpp
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Renta.cpp(105,55): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\Renta.cpp(127,51): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Generando código...
+  proyecto_labo2.vcxproj -> C:\Users\Majo Illanes\Desktop\proyectoLabo_2\proyecto_labo2\x64\Debug\proyecto_labo2.exe
