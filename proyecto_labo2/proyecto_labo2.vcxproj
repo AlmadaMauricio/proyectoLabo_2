@@ -138,6 +138,7 @@
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Renta.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="ValorRenta.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Administrador.h" />
@@ -150,6 +151,7 @@
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Renta.h" />
     <ClInclude Include="User.h" />
+    <ClInclude Include="ValorRenta.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
