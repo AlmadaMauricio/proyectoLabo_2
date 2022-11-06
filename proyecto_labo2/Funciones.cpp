@@ -11,6 +11,7 @@
 #include <cstring>
 #include "Administrador.h"
 #include "Persona.h"
+#include "Renta.h"
 
 using namespace std;
 using namespace rlutil;
@@ -148,6 +149,7 @@ bool menuPrincipal() {
 	char confirmarSalida;
 	bool salir = false;
 
+
 	while (!salir) {
 		setColor(CYAN);
 		cls();
@@ -177,7 +179,7 @@ bool menuPrincipal() {
 		
 			break;
 		case 3:
-			
+
 			break;
 		case 4:
 			
