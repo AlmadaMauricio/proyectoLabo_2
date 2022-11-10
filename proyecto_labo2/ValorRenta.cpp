@@ -169,7 +169,7 @@ void modificar_importe_renta(float nuevoPrecio) {
 	aux.grabarEnDisco();
 }
 
-void listar_historial_precios_Rentad()
+void listar_historial_precios_renta()
 {
 	ValorRenta aux;
 	int pos = 0;

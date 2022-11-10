@@ -108,7 +108,7 @@ void promedio_rentas_pendientes();
 
 void eliminar_rentas_pendientes(int id);
 
-void listadoRentaPorIdUser();
+void listadoRentasPorIdUser();
 
 void mostrarRentasPorUser(int id);
 

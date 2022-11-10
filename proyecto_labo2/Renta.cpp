@@ -421,7 +421,7 @@ void listadoRentasDesaprobadas() {
 }
 
 void listarRentasPorIdDesc() {
-	/*
+	
 	int cantRentas = buscarCantidadRentas();
 
 	if (cantRentas == 0) {
@@ -431,14 +431,14 @@ void listarRentasPorIdDesc() {
 
 	Renta* Rentas = new Renta[cantRentas];
 
-	if (rentas == NULL) { return; }
+	if (Rentas == NULL) { return; }
 
-	copiarRentas(rentas, cantRentas);
-	ordernarVecRentaPorIdDesc(rentas, cantRentas);
-	mostrarRentas(rentas, cantRentas);
+	copiarRentas(Rentas, cantRentas);
+	ordernarVecRentaPorIdDesc(Rentas, cantRentas);
+	mostrarRentas(Rentas, cantRentas);
 
-	delete rentas;
-	*/
+	delete Rentas;
+	
 }
 
 void ordernarVecRentaPorIdDesc(Renta* vRentas, int tam) {
@@ -453,7 +453,7 @@ void ordernarVecRentaPorIdDesc(Renta* vRentas, int tam) {
 		}
 	}
 }
-/*
+
 void listarRentaPorFechaDesc() {
 	int cantReg = buscarCantidadRentas();
 
@@ -473,7 +473,7 @@ void listarRentaPorFechaDesc() {
 	delete vRentas;
 
 }
-*/
+
 
 void ordernarVectorRentaPorFechaDesc(Renta* vec, int tam) {
 	Renta aux;
@@ -561,6 +561,7 @@ void consultaRentasPorAnio() {
 	delete vecRentas;
 }
 
+
 void mostrarConsultasPorAnio(Renta* vecRentas, int tam, int anioConsulta) {
 
 	cls();
@@ -640,7 +641,7 @@ void copiarRentas(Renta* vecRenta, int tam) {
 
 	for (int i = 0; i < tam; i++) { vecRenta[i].leerDeDisco(i); }
 }
-/*
+
 void consultaRentasPorFecha() {
 
 	int cantidadRentas = buscarCantidadRentas();
@@ -675,7 +676,7 @@ void consultaRentasPorFecha() {
 
 	delete vecRentas;
 }
-*/
+
 
 void mostrarConsultasPorFecha(Renta* vecRentas, int tam, Fecha fechaConsulta) {
 
@@ -1122,7 +1123,7 @@ void eliminar_rentas_pendientes(int id)
 
 }
 
-void listadoRentasPorIdUSer()
+void listadoRentasPorIdUser()
 {
 	int ID = 0;
 	int pos = 0;
@@ -1169,7 +1170,7 @@ void listadoRentasPorIdUSer()
 	mostrarRentasPorUser(ID);
 }
 
-void mostrarRentasPorUSer(int id)
+void mostrarRentasPorUser(int id)
 {
 	Renta renta;
 	int p = 0;
