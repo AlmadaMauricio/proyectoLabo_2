@@ -11,7 +11,7 @@
 #include <cstring>
 #include "Administrador.h"
 #include "Persona.h"
-//#include "Renta.h"
+#include "Renta.h"
 
 using namespace std;
 using namespace rlutil;
