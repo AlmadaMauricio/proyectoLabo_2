@@ -110,7 +110,7 @@ void eliminar_rentas_pendientes(int id);
 
 void listadoRentaPorIdUser();
 
-void mostrarRentaPorUser(int id);
+void mostrarRentasPorUser(int id);
 
 //NUEVO REPORTE APROBADAS POR ANIO
 void cantidad_rentas_aprobadas_por_anio();

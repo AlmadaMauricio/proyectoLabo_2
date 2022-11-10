@@ -1,6 +1,8 @@
 #include "Renta.h"
 #include "User.h"
 #include "Monopatin.h"
+#include "PagoRenta.h"
+#include "ValorRenta.h"
 
 using namespace std;
 using namespace rlutil;
@@ -57,7 +59,7 @@ void Renta::cargarRenta() {
 
 	int aux;
 	int pos = 0;
-	int posSocio = 0;
+	int posUser = 0;
 	Monopatin monopatinRegistro;
 	Fecha fechaRenta;
 	Administrador admin;
@@ -124,7 +126,7 @@ void Renta::cargarRenta() {
 	this->setIdUser(aux);
 
 	monopatinRegistro.cargarMonopatin();
-	monopatinRegistro.setIdUser(aux);
+	monopatinRegistro.setIdMonopatin(aux);
 
 	this->setIdMonopatin(monopatinRegistro.getIdMonopatin());
 
@@ -135,7 +137,7 @@ void Renta::cargarRenta() {
 	this->setIdRenta(generarIdRenta() + 1);
 	this->setEditable(true);
 
-	//float valorRenta = getUltimoPrecioRenta();
+	float valorRenta = getUltimoPrecioRenta();
 
 	cout << endl << "Valor de la renta: $" << valorRenta << endl;
 
@@ -147,7 +149,7 @@ void Renta::cargarRenta() {
 	monopatinRegistro.grabarEnDisco();
 
 	if (this->grabarEnDisco()) {
-		cout << "La Renta " << this->getIdSolicitud() << " fue Ingresada correctamente.";
+		cout << "La Renta " << this->getIdRenta() << " fue Ingresada correctamente.";
 		cout << endl;
 	}
 	else {
@@ -451,6 +453,7 @@ void ordernarVecRentaPorIdDesc(Renta* vRentas, int tam) {
 		}
 	}
 }
+/*
 void listarRentaPorFechaDesc() {
 	int cantReg = buscarCantidadRentas();
 
@@ -470,6 +473,7 @@ void listarRentaPorFechaDesc() {
 	delete vRentas;
 
 }
+*/
 
 void ordernarVectorRentaPorFechaDesc(Renta* vec, int tam) {
 	Renta aux;
@@ -636,7 +640,7 @@ void copiarRentas(Renta* vecRenta, int tam) {
 
 	for (int i = 0; i < tam; i++) { vecRenta[i].leerDeDisco(i); }
 }
-
+/*
 void consultaRentasPorFecha() {
 
 	int cantidadRentas = buscarCantidadRentas();
@@ -671,6 +675,7 @@ void consultaRentasPorFecha() {
 
 	delete vecRentas;
 }
+*/
 
 void mostrarConsultasPorFecha(Renta* vecRentas, int tam, Fecha fechaConsulta) {
 

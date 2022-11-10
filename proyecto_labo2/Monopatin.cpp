@@ -435,7 +435,7 @@ void listadoGeneralMonopatines()
 		}
 	}
 }
-
+/*
 void listadoDeMonopatinesPorNumDeSerie() {
 
 	int cantRegMonopatines = buscarCantidadMonopatines();
@@ -455,7 +455,7 @@ void listadoDeMonopatinesPorNumDeSerie() {
 
 	delete monopatin;
 }
-
+*/
 int buscarCantidadMonopatines() {
 
 	FILE* p = fopen("monopatines.dat", "rb");
