@@ -49,6 +49,11 @@ int Monopatin::getNumSerie() {
 
 bool Monopatin::getEstado() {
 	return _estado;
-};
+}
+void Monopatin::cargarMonopatin()
+{
+
+}
+;
 
 

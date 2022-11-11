@@ -582,7 +582,7 @@ RLUTIL_INLINE void setString(RLUTIL_STRING_T str) {
 #endif // __cplusplus
 #if defined(_WIN32) && !defined(RLUTIL_USE_ANSI)
 	HANDLE hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
-	DWORD numberOfCharsWritten;
+	DWORD numberOfCharsWritten = 0;
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
 
 	GetConsoleScreenBufferInfo(hConsoleOutput, &csbi);
@@ -704,7 +704,7 @@ RLUTIL_INLINE int tcols(void) {
 /// for no message.
 #ifdef __cplusplus
 RLUTIL_INLINE void anykey() {
-	getch();
+	_getch();
 }
 
 template <class T> void anykey(const T& msg) {

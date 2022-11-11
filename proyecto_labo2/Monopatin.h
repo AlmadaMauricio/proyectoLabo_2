@@ -34,7 +34,9 @@ public:
 	bool getEstado();
 
 	void cargarMonopatin();
+
 	void mostrarMonopatin();
+	
 	void listar();
 	void listarPorNumSerie();
 	void listarPorIdMonopatin();
@@ -44,7 +46,6 @@ public:
 	bool leerDeDisco(int pos);
 	bool grabarEnDisco();
 	bool modificarEnDisco(int pos);
+	
 };
-
-// Funciones globales Monopatin
 
