@@ -34,18 +34,26 @@ public:
 	bool getEstado();
 
 	void cargarMonopatin();
-
 	void mostrarMonopatin();
-	
 	void listar();
 	void listarPorNumSerie();
 	void listarPorIdMonopatin();
-	void listarPorModeloMonopatin();
-
-
 	bool leerDeDisco(int pos);
 	bool grabarEnDisco();
 	bool modificarEnDisco(int pos);
 	
 };
 
+//FUNCIONES GLOBALES
+
+int buscarMonopatinPorNumSerie(int);
+int generarIdMonopatin();
+int checkArchivoMonopatin();
+int buscarMonopatinPorId(int);
+void crear_nuevo_monopatin();
+void eliminarMonopatin(int idMonopatin);
+void modificar_monopatin();
+void ModificarModelo(Monopatin aux, int pos);
+void ModificarPais(Monopatin aux, int pos);
+void ModificarNumSerie(Monopatin aux, int pos);
+void listadoGeneralMonopatines();
