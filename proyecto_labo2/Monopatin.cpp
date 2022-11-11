@@ -453,7 +453,7 @@ void listadoDeMonopatinesPorNumDeSerie() {
 	ordernarVecPorNumSerie(monopatin, cantRegMonopatines);
 	mostrarListadoMonopatines(monopatin, cantRegMonopatines);
 
-	delete monopatin;
+	delete []monopatin;
 }
 
 int buscarCantidadMonopatines() {
