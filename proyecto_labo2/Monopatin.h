@@ -53,14 +53,14 @@ int generarIdMonopatin();
 
 int checkArchivoMonopatin();
 
-int buscarMoopatinPorId(int);
+int buscarMonopatinPorId(int);
 
-void crear_nueva_Monopatin();
+void crear_nuevo_monopatin();
 void eliminarMonopatin(int idMonopatin);
 void modificar_monopatin();
 
 
-void listadoGeneralMonopatin();
+void listadoGeneralMonopatines();
 
 int buscarMonopatinPorId(int idMonopatin);
 int buscarMonopatinPorNumSerie(int id);
@@ -90,7 +90,7 @@ void ModificarNumSerie(Monopatin aux, int pos);
 
 void consultaMonopatinesPorModelo();
 
-void eliminar_monopatines_user(int id);
+void eliminar_monopatin(int id);
 /*
 //CANTIDAD DE MONOPATINES POR TIPO
 

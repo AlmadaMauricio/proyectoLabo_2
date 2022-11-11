@@ -435,7 +435,7 @@ void listadoGeneralMonopatines()
 		}
 	}
 }
-/*
+
 void listadoDeMonopatinesPorNumDeSerie() {
 
 	int cantRegMonopatines = buscarCantidadMonopatines();
@@ -455,7 +455,7 @@ void listadoDeMonopatinesPorNumDeSerie() {
 
 	delete monopatin;
 }
-*/
+
 int buscarCantidadMonopatines() {
 
 	FILE* p = fopen("monopatines.dat", "rb");
@@ -788,14 +788,14 @@ void consultaMonopatinesPorModelo()
 	}
 }
 
-void eliminar_monopatines_user(int id)
+void eliminar_monopatin(int id)
 {
 	Monopatin monopatin;
 	int pos = 0;
 
 	while (monopatin.leerDeDisco(pos))
 	{
-		//if (monopatin.getIdUser() == id)
+		if (monopatin.getIdMonopatin() == id)
 		{
 			monopatin.setEstado(false);
 			monopatin.modificarEnDisco(pos);
