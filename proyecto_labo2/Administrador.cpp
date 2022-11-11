@@ -313,7 +313,7 @@ int buscarCantidadRegistrosAdmin() {
 		return 0;
 	}
 
-	size_t bytes;
+	int bytes;
 	int cant_reg;
 
 	fseek(p, 0, SEEK_END);
