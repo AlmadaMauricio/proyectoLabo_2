@@ -46,10 +46,10 @@ public:
 
 //FUNCIONES GLOBALES
 
-int buscarMonopatinPorNumSerie(int);
+int buscarMonopatinPorNumSerie(int id);
 int generarIdMonopatin();
 int checkArchivoMonopatin();
-int buscarMonopatinPorId(int);
+int buscarMonopatinPorId(int idMonopatin);
 void crear_nuevo_monopatin();
 void eliminarMonopatin(int idMonopatin);
 void modificar_monopatin();
@@ -57,3 +57,19 @@ void ModificarModelo(Monopatin aux, int pos);
 void ModificarPais(Monopatin aux, int pos);
 void ModificarNumSerie(Monopatin aux, int pos);
 void listadoGeneralMonopatines();
+int buscarCantidadMonopatines();
+void listadoDeMonopatinesPorNumDeSerie();
+void copiarMonopatines(Monopatin* vMonopatin, int tam);
+void ordernarVecPorNumSerie(Monopatin* vMonopatin, int tam);
+void mostrarListadoMonopatines(Monopatin* vMonopatin, int tam);
+int CantidadRegistroMonopatines();
+void ordenarVector(Monopatin* vec, int tam);
+void MostrarVector(Monopatin* vec, int tam);
+void consultaMonopatinPorNumSerie();
+void mostrarConsultaMonopatinPorNumSerie(Monopatin* vecMonopatin, int tamVec, int numSerie);
+void consultaMonopatinPorIdMonopatin();
+void mostrarConsultaMonopatinPorId(Monopatin* vecMonopatin, int tamVec, int numId);
+void consultaMonopatinesPorModelo();
+void eliminar_monopatin(int id);
+
+

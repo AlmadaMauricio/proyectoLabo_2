@@ -480,6 +480,257 @@ void listadoGeneralMonopatines()
 	}
 }
 
+int buscarCantidadMonopatines()
+{
+	FILE* p = fopen("monopatines.dat", "rb");
+
+	if (p == NULL) { return 0; }
+
+	fseek(p, 0, SEEK_END);
+	size_t bytes = ftell(p);
+	fclose(p);
+
+	unsigned int cantidadMonopatines = bytes / sizeof Monopatin;
+	return cantidadMonopatines;
+}
+void listadoDeMonopatinesPorNumDeSerie()
+{
+	int cantRegMonopatines = buscarCantidadMonopatines();
+
+	if (cantRegMonopatines == 0) {
+		cout << "No existen Monopatines registrados." << endl;
+		return;
+	}
+
+	Monopatin* monopatin = new Monopatin[cantRegMonopatines];
+
+	if (monopatin == NULL) { return; }
+
+	copiarMonopatines(monopatin, cantRegMonopatines);
+	ordernarVecPorNumSerie(monopatin, cantRegMonopatines);
+	mostrarListadoMonopatines(monopatin, cantRegMonopatines);
+
+	delete[]monopatin;
+}
+void copiarMonopatines(Monopatin* vMonopatin, int tam) {
+	for (int i = 0; i < tam; i++)
+	{
+		vMonopatin[i].leerDeDisco(i);
+	}
+}
+
+void ordernarVecPorNumSerie(Monopatin* vMonopatin, int tam)
+{
+	Monopatin aux;
+
+	for (int i = 0; i < tam - 1; i++) {
+		for (int j = i + 1; j < tam; j++) {
+			if (vMonopatin[i].getNumSerie() > vMonopatin[j].getNumSerie()) {
+				aux = vMonopatin[i];
+				vMonopatin[i] = vMonopatin[j];
+				vMonopatin[j] = aux;
+			}
+		}
+	}
+}
+
+void mostrarListadoMonopatines(Monopatin* vMonopatin, int tam)
+{
+	cout << left;
+	cout << setw(15) << "NÚM DE SERIE";
+	cout << setw(9) << "ID MONOPATIN";
+	cout << setw(18) << "MODELO";
+	cout << setw(15) << "PAIS FABR." << endl;
+	cout << "-----------------------------------------------------------------------------------" << endl;
+
+	for (int i = 0; i < tam; i++) {
+		vMonopatin[i].listarPorNumSerie();
+	}
+}
+
+int CantidadRegistroMonopatines()
+{
+	FILE* p = fopen("monopatines.dat", "rb");
+	if (p == NULL) {
+		return 0;
+	}
+
+	int bytes;
+	int cant_reg;
+
+	fseek(p, 0, SEEK_END);
+	bytes = ftell(p);
+	fclose(p);
+	cant_reg = bytes / sizeof(Monopatin);
+	return cant_reg;
+}
+
+void ordenarVector(Monopatin* vec, int tam)
+{
+	Monopatin aux;
+
+	for (int i = 0; i < tam - 1; i++) {
+		for (int j = i + 1; j < tam; j++) {
+			if (vec[i].getModelo() > vec[j].getModelo()) {
+				aux = vec[i];
+				vec[i] = vec[j];
+				vec[j] = aux;
+			}
+		}
+	}
+}
+
+void MostrarVector(Monopatin* vec, int tam)
+{
+	cout << left;
+	cout << setw(9) << "ID MONOPATIN";
+	cout << setw(18) << "MODELO";
+	cout << setw(15) << "PAIS FABR.";
+	cout << setw(18) << "NÚMERO DE SERIE" << endl;
+	cout << "--------------------------------------------------------------------------------------" << endl;
+
+	for (int i = 0; i < tam; i++)
+	{
+		vec[i].listarPorIdMonopatin();
+	}
+
+}
+
+void consultaMonopatinPorNumSerie()
+{
+	int cantMonopatines = buscarCantidadMonopatines();
+	int numSerie;
+
+	if (cantMonopatines == 0) {
+		cout << "No se encontraron Registros de Monopatines cargados.";
+		return;
+	}
+
+	Monopatin* vecMonopatines = new Monopatin[cantMonopatines];
+
+	if (vecMonopatines == NULL) { return; }
+
+	copiarMonopatines(vecMonopatines, cantMonopatines);
+
+	cout << "Ingrese el Numero de Serie: ";
+	cin >> numSerie;
+
+	mostrarConsultaMonopatinPorNumSerie(vecMonopatines, cantMonopatines, numSerie);
+}
+
+void mostrarConsultaMonopatinPorNumSerie(Monopatin* vecMonopatin, int tamVec, int numSerie)
+{
+	cls();
+
+	cout << " -- CONSULTAS DE MONOPATINES POR NUMERO DE SERIE --" << endl;
+
+	cout << left;
+	cout << setw(18) << "NÚMERO DE SERIE";
+	cout << setw(9) << "ID MONOPATIN";
+	cout << setw(18) << "MODELO";
+	cout << setw(15) << "PAIS FABR." << endl;
+	cout << "---------------------------------------------------------------------------------------" << endl;
+
+
+	for (int i = 0; i < tamVec; i++) {
+		if (vecMonopatin[i].getNumSerie() == numSerie) {
+			vecMonopatin[i].listarPorNumSerie();
+		}
+	}
+}
+
+void consultaMonopatinPorIdMonopatin()
+{
+	int cantMonopatines = buscarCantidadMonopatines();
+	int numID;
+
+	if (cantMonopatines == 0) {
+		cout << "No se encontraron Registros de Monopatines cargados.";
+		return;
+	}
+
+	Monopatin* vecMonopatines = new Monopatin[cantMonopatines];
+
+	if (vecMonopatines == NULL) { return; }
+
+	copiarMonopatines(vecMonopatines, cantMonopatines);
+
+	cout << "Ingrese el Numero de ID: ";
+	cin >> numID;
+
+	mostrarConsultaMonopatinPorId(vecMonopatines, cantMonopatines, numID);
+}
+
+void mostrarConsultaMonopatinPorId(Monopatin* vecMonopatin, int tamVec, int numId)
+{
+	cls();
+
+	cout << " -- CONSULTAS DE MONOPATINES POR NUMERO DE SERIE --" << endl;
+
+	cout << left;
+	cout << setw(9) << "ID MONOPATIN";
+	cout << setw(18) << "NÚMERO DE SERIE";
+	cout << setw(18) << "MODELO";
+	cout << setw(15) << "PAIS FABR." << endl;
+	cout << "---------------------------------------------------------------------------------------" << endl;
+
+
+	for (int i = 0; i < tamVec; i++) {
+		if (vecMonopatin[i].getIdMonopatin() == numId) {
+			vecMonopatin[i].listarPorIdMonopatin();
+		}
+	}
+}
+
+void consultaMonopatinesPorModelo()
+{
+	Monopatin monopatin;
+	int pos = 0;
+	char modeloABuscar[30];
+	char modeloArchivo[30];
+
+	cout << "Ingrese el modelo a buscar: ";
+	cin.ignore();
+	cin.getline(modeloABuscar, 29);
+
+	todoAMayus(modeloABuscar);
+
+	cout << left;
+	cout << setw(5) << "ID";
+	cout << setw(18) << "MODELO";
+	cout << setw(15) << "PAIS FABR.";
+	cout << setw(15) << "NÚMERO DE SERIE" << endl;
+	cout << "----------------------------------------------------------------------------------" << endl;
+
+	while (monopatin.leerDeDisco(pos++))
+	{
+		strcpy(modeloArchivo, monopatin.getModelo());
+		todoAMayus(modeloArchivo);
+
+		if (monopatin.getEstado() && strcmp(modeloABuscar, modeloArchivo) == 0)
+		{
+			monopatin.listar();
+		}
+	}
+}
+
+void eliminar_monopatin(int id)
+{
+	Monopatin monopatin;
+	int pos = 0;
+
+	while (monopatin.leerDeDisco(pos))
+	{
+		if (monopatin.getIdMonopatin() == id)
+		{
+			monopatin.setEstado(false);
+			monopatin.modificarEnDisco(pos);
+		}
+		pos++;
+	}
+}
+
+
 bool Monopatin::leerDeDisco(int pos)
 {
 	FILE* fReg = fopen("monopatines.dat", "rb");
