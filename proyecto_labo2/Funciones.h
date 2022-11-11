@@ -15,6 +15,31 @@ void animacion();
 void mostrarIntegrantes();
 void mostrarLeyenda();
 
+// Funciones
+void menuUsers();
+void menuListadosUsers();
+void menuConsultasUSers();
+
+void menuAdmins();
+void menuListadosAdmin();
+
+void menuRentas();
+void menuListadosRentas();
+void menuConsultasRentas();
+
+void menuMonopatines();
+void menuListadosMonopatines();
+void menuConsultasMonopatines();
+
+void menuInformes();
+
+void menuConfiguracion();
+
+bool exportarCSVUsers();
+bool exportarCSVRentas();
+bool exportarCSVMonopatines();
+
+
 
 #endif // FUNCIONES_H_INCLUDED
 

@@ -264,7 +264,7 @@ void mostrarLogo() {
 	}
 }
 
-	void mostrarLeyenda(){
+void mostrarLeyenda(){
 
 		locate(16, 8);
 		cout << "Sistema de Gestión desarrollado por el equipo Monopatigres" << endl;
@@ -283,10 +283,6 @@ void animacion()
 		segs--;
 	}
 }
-
-void menuUsers();
-void menuListadosUsers();
-void menuConsultasUSers();
 
 void menuUsers()
 {
@@ -444,4 +440,548 @@ void menuConsultasUSers()
 			break;
 		}
 	}
+}
+
+void menuAdmins()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tAdministradores" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    1 - Crear nuevo Administrador " << endl;
+		cout << "    2 - Modificar Administrador " << endl;
+		cout << "    3 - Eliminar Administrador " << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    4 - Listados de administradores" << endl;
+		cout << "    5 - Buscar Administrador por ID" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			crear_nuevo_admin();
+			break;
+		case 2:
+			modificar_admin();
+			break;
+		case 3:
+			baja_admin();
+			break;
+		case 4:
+			menuListadosAdmin();
+			break;
+		case 5:
+			consulta_admin_Por_ID();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+			break;
+		}
+	}
+}
+
+void menuListadosAdmin()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\t Listados administradores" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    1 - Listados general de administradores" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			listado_general_admin();
+			anykey();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+			break;
+		}
+	}
+}
+
+void menuRentas()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tRentas" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    1 - Crear nueva Renta" << endl;
+		cout << "    2 - Modificar Renta" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    3 - Listados" << endl;
+		cout << "    4 - Consultas" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//cargarNuevaRenta();
+			anykey();
+			break;
+		case 2:
+			//modificar_renta();
+			break;
+		case 3:
+			//menuListadosRentas();
+			break;
+		case 4:
+			//menuConsultasRentas();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+			break;
+		}
+	}
+}
+
+void menuListadosRentas()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tListados Rentas" << endl;
+		cout << "-------------------------------------------------" << endl;
+		cout << "    1 - Listar todas las Rentas" << endl;
+		cout << "    2 - Listar solicitudes por ID de user" << endl;
+		cout << "    3 - Listar Solicitudes por orden descendente" << endl;
+		cout << "    4 - Listar Solicitudes por fecha Descendente" << endl;
+		cout << "    5 - Listar Solicitudes aprobadas" << endl;
+		cout << "    6 - Listar Solicitudes pendientes" << endl;
+		cout << "    7 - Listar Solicitudes desaprobadas" << endl;
+		cout << "--------------------------------------------------" << endl;
+		cout << "0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//listadoRentas();
+			anykey();
+			break;
+		case 2:
+			//listadoRentaPorIdUser();
+			anykey();
+			break;
+		case 3:
+			//listarRentaPorIdDesc();
+			anykey();
+			break;
+		case 4:
+			//listarRentaPorFechaDesc();
+			anykey();
+			break;
+		case 5:
+			//listadoRentasAprobadas();
+			anykey();
+			break;
+		case 6:
+			//listadoRentasPendientes();
+			anykey();
+			break;
+		case 7:
+			//listadoRentasaDesaprobadas();
+			anykey();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+			break;
+		}
+	}
+}
+
+void menuConsultasRentas()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tConsultas Rentas" << endl;
+		cout << "-------------------------------------------------" << endl;
+		cout << "    1 - Consulta por ID de Renta" << endl;
+		cout << "    2 - Consulta por Fecha" << endl;
+		cout << "    3 - Consulta por Año" << endl;
+		cout << "    4 - Consulta Rentas pendientes por User" << endl;
+		cout << "--------------------------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//consultaRentasPorId();
+			anykey();
+			break;
+		case 2:
+			//consultaRentasPorFecha();
+			anykey();
+			break;
+		case 3:
+			//consultaRentasPorAnio();
+			anykey();
+			break;
+		case 4:
+			//listadoRentasPendientesPorUser();???????
+			anykey();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+			break;
+		}
+	}
+}
+
+void menuMonopatines()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+
+		cout << "\tMonopatines" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    1 - Modificar monopatin " << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    2 - Listados" << endl;
+		cout << "    3 - Consultas" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//modificar_monopatin();
+			break;
+		case 2:
+			menuListadosMonopatines();
+			break;
+		case 3:
+			menuConsultasMonopatines();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+			break;
+		}
+	}
+}
+
+void menuListadosMonopatines()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tListados Monopatines" << endl;
+		cout << "----------------------------------" << endl;
+		cout << "    1 - Listar todos los monopatines" << endl;
+		cout << "    2 - Listado por N° de serie" << endl;
+		cout << "----------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//listadoGeneralMonopatines();
+			anykey();
+			break;
+		case 2:
+			//listadoDeMonopatinPorNumDeSerie();
+			anykey();
+			break;
+
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+
+			break;
+		}
+	}
+}
+
+void menuConsultasMonopatines()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tConsultas Monopatines" << endl;
+		cout << "-----------------------------------------------" << endl;
+		cout << "    1 - Consultas de monopatines por número de serie" << endl;
+		cout << "    2 - Consultas por ID de monopatines" << endl;
+		cout << "    3 - Consulta de monopatines por modelo" << endl;
+		cout << "-----------------------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//consultaMonopatinesPorNumSerie();
+			anykey();
+			break;
+		case 2:
+			//consultaMonopatinesPorIdArma();
+			anykey();
+			break;
+		case 3:
+			//consultaMonopatinesPorModelo();
+			anykey();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+
+			break;
+		}
+	}
+}
+
+void menuInformes()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\t\t\t\tInformes" << endl;
+		cout << "-----------------------------------------------------------------" << endl;
+		cout << "    1 - Recaudación anual" << endl;
+		cout << "    2 - Recaudación por user" << endl;
+		cout << "    3 - Recaudación por administrador" << endl;
+		cout << "    4 - Cantidad de monopatines por pais " << endl;
+		cout << "    5 - Cantidad de monopatines por modelo" << endl;
+		cout << "    6 - Cantidad de rentas aprobadas por año" << endl;
+		cout << "    7 - Cantidad de rentas desaprobadas por año" << endl;
+	
+		cout << "-----------------------------------------------------------------" << endl;
+		cout << "   8 - Listar historial de precios de renta" << endl;
+		cout << "-----------------------------------------------------------------" << endl;
+		cout << "0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//Informe_Recaudacion_Anual();
+			break;
+		case 2:
+			//recaudacionPorUser();
+			break;
+		case 3:
+			//recaudacionPorAdmin();
+			break;
+		case 4:
+			//cantidad_de_monopatines_por_pais();
+			anykey();
+			break;
+		case 5:
+			//cantidad_monopatines_por_modelo();
+			anykey();
+			break;
+		case 6:
+			//cantidad_rentas_aprobadas_por_anio();
+			anykey();
+			break;
+		case 7:
+			//cantidad_rentas_desap_por_anio();
+			anykey();
+			break;
+		case 8:
+			//listar_historial_precios_renta();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+
+			break;
+		}
+	}
+}
+
+void menuConfiguracion()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\t\tConfiguraciones" << endl;
+		cout << "-----------------------------------------------" << endl;
+		cout << "               - Precios -              " << endl;
+		cout << "    1 - Modificar precio de renta" << endl << endl;
+		cout << "               - Archivos -              " << endl;
+		cout << "    2 - Hacer copia de seguridad Users" << endl;
+		cout << "    3 - Hacer copia de seguridad Rentas" << endl;
+		cout << "    4 - Exportar archivo CSV de Users" << endl;
+		cout << "    5 - Exportar archivo CSV de Rentas" << endl;
+		cout << "    6 - Exportar archivo CSV de Monopatines" << endl;
+		cout << "-----------------------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//modificar_precio_renta();
+			break;
+		case 2:
+			//backup_users();
+			anykey();
+			break;
+		case 3:
+			//backup_rentas();
+			anykey();
+			break;
+		case 6:
+			//exportarCSVUsers();
+			break;
+		case 7:
+			//exportarCSVRentas();
+			break;
+		case 8:
+			//exportarCSVMonopatines();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+
+			break;
+		}
+	}
+}
+
+bool exportarCSVUsers()
+{
+	return false;
+}
+
+bool exportarCSVRentas()
+{
+	return false;
+}
+
+bool exportarCSVMonopatines()
+{
+	return false;
 }
