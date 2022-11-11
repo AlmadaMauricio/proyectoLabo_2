@@ -283,3 +283,165 @@ void animacion()
 		segs--;
 	}
 }
+
+void menuUsers();
+void menuListadosUsers();
+void menuConsultasUSers();
+
+void menuUsers()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tUsers" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    1 - Cargar nuevo User" << endl;
+		cout << "    2 - Modificar User" << endl;
+		cout << "    3 - Eliminar User" << endl;
+		cout << "    4 - Cobrar Renta" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    5 - Listados" << endl;
+		cout << "    6 - Consultas" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//cargar_nuevo_user();
+			break;
+		case 2:
+			//modificar_user();
+			break;
+		case 3:
+			//baja_user();
+			break;
+		case 4:
+			//cobrar_renta();
+			break;
+		case 5:
+			//menuListadosUsers();
+			break;
+		case 6:
+			//menuConsultasUsers();
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+
+			break;
+		}
+	}
+}
+
+void menuListadosUsers()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tListados Users" << endl;
+		cout << "-------------------------------" << endl;
+		cout << "    1 - Listar todos los Users" << endl;
+		cout << "    2 - Listar users ordenados alfabeticamente" << endl;
+		cout << "    3 - Listar users por antigüedad" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//listado_general_users();
+			anykey();
+			break;
+		case 2:
+			//listarUserAlfabeticamente();
+			anykey();
+			break;
+		case 3:
+			//listarUserPorFecha();
+			anykey();
+			break;
+		case 4:
+
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+
+			break;
+		}
+	}
+}
+
+void menuConsultasUSers()
+{
+	int opcion;
+	char confirmarSalida;
+	bool salir = false;
+
+	while (!salir) {
+
+		setColor(WHITE);
+		setBackgroundColor(DARKGREY);
+		cls();
+		cout << "\tConsultas Users" << endl;
+		cout << "-------------------------------" << endl;
+		cout << "    1 - Consulta por DNI" << endl;
+		cout << "    2 - Consulta por ID" << endl;
+		cout << "    3 - Consulta por Apellido" << endl;
+		cout << "---------------------------------" << endl;
+		cout << "    0 - Volver al menú principal" << endl << endl;
+
+		cout << "Opción: ";
+		cin >> opcion;
+
+		cls();
+
+		switch (opcion) {
+		case 1:
+			//consultaPorDni();
+			break;
+		case 2:
+			//consulta_Por_Id();
+			break;
+		case 3:
+			//consulta_Por_Apellido();
+			break;
+		case 4:
+
+
+			break;
+		case 0:
+			cout << "¿Volver al menu anterior? (S/N) ";
+			cin >> confirmarSalida;
+
+			salir = (tolower(confirmarSalida) == 's');
+
+			break;
+		}
+	}
+}
