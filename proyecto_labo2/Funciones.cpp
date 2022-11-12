@@ -177,22 +177,22 @@ bool menuPrincipal() {
 
 		switch (opcion) {
 		case 1:
-			
+			menuUsers();
 			break;
 		case 2:
-		
+			menuAdmins();
 			break;
 		case 3:
-
+			menuRentas();
 			break;
 		case 4:
-			
+			menuMonopatines();
 			break;
 		case 5:
-			
+			menuInformes();
 			break;
 		case 6:
-			
+			menuConfiguracion();
 			break;
 		case 9:
 			cout << "¿Desea cerrar la sesion? (S/N) ";
