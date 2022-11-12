@@ -137,6 +137,7 @@
     <ClCompile Include="Pais.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="ValorRenta.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Administrador.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="Pais.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="User.h" />
+    <ClInclude Include="ValorRenta.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

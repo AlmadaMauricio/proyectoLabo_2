@@ -13,6 +13,7 @@
 #include "Persona.h"
 #include "User.h"
 #include "Monopatin.h"
+#include "ValorRenta.h"
 
 using namespace std;
 using namespace rlutil;
@@ -730,7 +731,7 @@ void menuMonopatines()
 
 		switch (opcion) {
 		case 1:
-			//modificar_monopatin();
+			modificar_monopatin();
 			break;
 		case 2:
 			menuListadosMonopatines();
@@ -773,11 +774,11 @@ void menuListadosMonopatines()
 
 		switch (opcion) {
 		case 1:
-			//listadoGeneralMonopatines();
+			listadoGeneralMonopatines();
 			anykey();
 			break;
 		case 2:
-			//listadoDeMonopatinPorNumDeSerie();
+			listadoDeMonopatinesPorNumDeSerie();
 			anykey();
 			break;
 
@@ -822,11 +823,11 @@ void menuConsultasMonopatines()
 			anykey();
 			break;
 		case 2:
-			//consultaMonopatinesPorIdArma();
+			consultaMonopatinPorIdMonopatin();
 			anykey();
 			break;
 		case 3:
-			//consultaMonopatinesPorModelo();
+			consultaMonopatinesPorModelo();
 			anykey();
 			break;
 		case 0:
@@ -898,7 +899,7 @@ void menuInformes()
 			anykey();
 			break;
 		case 8:
-			//listar_historial_precios_renta();
+			listar_historial_precios_renta();
 			break;
 		case 0:
 			cout << "¿Volver al menu anterior? (S/N) ";
@@ -942,10 +943,10 @@ void menuConfiguracion()
 
 		switch (opcion) {
 		case 1:
-			//modificar_precio_renta();
+			modificar_precio_renta();
 			break;
 		case 2:
-			//backup_users();
+			backup_users();
 			anykey();
 			break;
 		case 3:
