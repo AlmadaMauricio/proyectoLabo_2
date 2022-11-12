@@ -318,22 +318,22 @@ void menuUsers()
 
 		switch (opcion) {
 		case 1:
-			//cargar_nuevo_user();
+			cargar_nuevo_user();
 			break;
 		case 2:
-			//modificar_user();
+			modificar_user();
 			break;
 		case 3:
-			//baja_user();
+			baja_user();
 			break;
 		case 4:
 			//cobrar_renta();
 			break;
 		case 5:
-			//menuListadosUsers();
+			menuListadosUsers();
 			break;
 		case 6:
-			//menuConsultasUsers();
+			//menuConsultasUser();
 			break;
 		case 0:
 			cout << "¿Volver al menu anterior? (S/N) ";
@@ -372,15 +372,15 @@ void menuListadosUsers()
 
 		switch (opcion) {
 		case 1:
-			//listado_general_users();
+			listado_general_users();
 			anykey();
 			break;
 		case 2:
-			//listarUserAlfabeticamente();
+			listarUserAlfabeticamente();
 			anykey();
 			break;
 		case 3:
-			//listarUserPorFecha();
+			listarUserPorFecha();
 			anykey();
 			break;
 		case 4:
@@ -423,13 +423,13 @@ void menuConsultasUSers()
 
 		switch (opcion) {
 		case 1:
-			//consultaPorDni();
+			consultaPorDni();
 			break;
 		case 2:
-			//consulta_Por_Id();
+			consulta_Por_Id();
 			break;
 		case 3:
-			//consulta_Por_Apellido();
+			consulta_Por_Apellido();
 			break;
 		case 4:
 
@@ -564,17 +564,17 @@ void menuRentas()
 
 		switch (opcion) {
 		case 1:
-			//cargarNuevaRenta();
+			cargarNuevaRenta();
 			anykey();
 			break;
 		case 2:
-			//modificar_renta();
+			modificar_renta();
 			break;
 		case 3:
-			//menuListadosRentas();
+			menuListadosRentas();
 			break;
 		case 4:
-			//menuConsultasRentas();
+			menuConsultasRentas();
 			break;
 		case 0:
 			cout << "¿Volver al menu anterior? (S/N) ";
@@ -616,31 +616,31 @@ void menuListadosRentas()
 
 		switch (opcion) {
 		case 1:
-			//listadoRentas();
+			listadoRentas();
 			anykey();
 			break;
 		case 2:
-			//listadoRentaPorIdUser();
+			listadoRentasPorIdUser();
 			anykey();
 			break;
 		case 3:
-			//listarRentaPorIdDesc();
+			listarRentasPorIdDesc();
 			anykey();
 			break;
 		case 4:
-			//listarRentaPorFechaDesc();
+			listarRentaPorFechaDesc();
 			anykey();
 			break;
 		case 5:
-			//listadoRentasAprobadas();
+			listadoRentasAprobadas();
 			anykey();
 			break;
 		case 6:
-			//listadoRentasPendientes();
+			listadoRentasPendientes();
 			anykey();
 			break;
 		case 7:
-			//listadoRentasaDesaprobadas();
+			listadoRentasDesaprobadas();
 			anykey();
 			break;
 		case 0:
@@ -669,7 +669,6 @@ void menuConsultasRentas()
 		cout << "    1 - Consulta por ID de Renta" << endl;
 		cout << "    2 - Consulta por Fecha" << endl;
 		cout << "    3 - Consulta por Año" << endl;
-		cout << "    4 - Consulta Rentas pendientes por User" << endl;
 		cout << "--------------------------------------------------" << endl;
 		cout << "    0 - Volver al menú principal" << endl << endl;
 
@@ -689,10 +688,6 @@ void menuConsultasRentas()
 			break;
 		case 3:
 			//consultaRentasPorAnio();
-			anykey();
-			break;
-		case 4:
-			//listadoRentasPendientesPorUser();???????
 			anykey();
 			break;
 		case 0:
@@ -821,7 +816,7 @@ void menuConsultasMonopatines()
 
 		switch (opcion) {
 		case 1:
-			//consultaMonopatinesPorNumSerie();
+			consultaMonopatinPorNumSerie();
 			anykey();
 			break;
 		case 2:
@@ -885,19 +880,19 @@ void menuInformes()
 			//recaudacionPorAdmin();
 			break;
 		case 4:
-			//cantidad_de_monopatines_por_pais();
+			//cantidad_de_monopatines_por_pais();???
 			anykey();
 			break;
 		case 5:
-			//cantidad_monopatines_por_modelo();
+			//cantidad_monopatines_por_modelo();??????
 			anykey();
 			break;
 		case 6:
-			//cantidad_rentas_aprobadas_por_anio();
+			cantidad_rentas_aprobadas_por_anio();
 			anykey();
 			break;
 		case 7:
-			//cantidad_rentas_desap_por_anio();
+			cantidad_rentas_desap_por_anio();
 			anykey();
 			break;
 		case 8:
@@ -952,7 +947,7 @@ void menuConfiguracion()
 			anykey();
 			break;
 		case 3:
-			//backup_rentas();
+			backup_rentas();
 			anykey();
 			break;
 		case 6:
