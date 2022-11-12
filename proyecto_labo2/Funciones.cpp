@@ -14,6 +14,8 @@
 #include "User.h"
 #include "Monopatin.h"
 #include "ValorRenta.h"
+#include "PagoRenta.h"
+#include "Renta.h"
 
 using namespace std;
 using namespace rlutil;

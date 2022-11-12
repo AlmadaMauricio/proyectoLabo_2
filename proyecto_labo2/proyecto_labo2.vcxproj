@@ -136,6 +136,7 @@
     <ClCompile Include="PagoRenta.cpp" />
     <ClCompile Include="Pais.cpp" />
     <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="Renta.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="ValorRenta.cpp" />
   </ItemGroup>
@@ -148,6 +149,7 @@
     <ClInclude Include="PagoRenta.h" />
     <ClInclude Include="Pais.h" />
     <ClInclude Include="Persona.h" />
+    <ClInclude Include="Renta.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="ValorRenta.h" />
   </ItemGroup>
