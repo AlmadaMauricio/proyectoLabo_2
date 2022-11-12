@@ -17,6 +17,7 @@
 #include "PagoRenta.h"
 #include "Renta.h"
 
+
 using namespace std;
 using namespace rlutil;
 

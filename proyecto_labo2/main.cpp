@@ -4,6 +4,8 @@
 #include "Administrador.h"
 #include "Persona.h"
 #include "Funciones.h"
+#include "User.h"
+#include "Renta.h"
 
 
 using namespace std;
@@ -35,6 +37,21 @@ int main()
 
 	} while (flag && flag2);
 
+	
+	User aux;
+	for (int i = 0; i < 100; i++)
+	{
+	aux.cargar();
+	}
+	
+
+	menuPrincipal();
+	
+	Renta aux2;
+	for (int i = 0; i < 100; i++)
+	{
+		aux2.cargarRenta();
+	}
 	
 	
 	
