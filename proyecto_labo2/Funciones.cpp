@@ -327,10 +327,9 @@ void menuUsers()
 		cout << "    1 - Cargar nuevo User" << endl;
 		cout << "    2 - Modificar User" << endl;
 		cout << "    3 - Eliminar User" << endl;
-		cout << "    4 - Cobrar Renta" << endl;
 		cout << "---------------------------------" << endl;
-		cout << "    5 - Listados" << endl;
-		cout << "    6 - Consultas" << endl;
+		cout << "    4 - Listados" << endl;
+		cout << "    5 - Consultas" << endl;
 		cout << "---------------------------------" << endl;
 		cout << "    0 - Volver al menú principal" << endl << endl;
 
@@ -350,12 +349,9 @@ void menuUsers()
 			baja_user();
 			break;
 		case 4:
-			//cobrar_renta();
-			break;
-		case 5:
 			menuListadosUsers();
 			break;
-		case 6:
+		case 5:
 			menuConsultasUsers();
 			break;
 		case 0:

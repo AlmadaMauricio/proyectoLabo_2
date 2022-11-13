@@ -20,6 +20,7 @@ int main()
 	bool flag2 = false;
 
 	mostrarLogo();
+	instalacionArchivos();
 	mostrarLeyenda();
 	mostrarIntegrantes();
 
