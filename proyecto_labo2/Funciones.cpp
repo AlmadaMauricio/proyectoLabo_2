@@ -16,6 +16,7 @@
 #include "ValorRenta.h"
 #include "PagoRenta.h"
 #include "Renta.h"
+#include "MonopatinPorPais.h"
 
 void instalacionArchivos()
 {
@@ -899,7 +900,7 @@ void menuInformes()
 			//recaudacionPorAdmin();
 			break;
 		case 4:
-			//cantidad_de_monopatines_por_pais();???
+			cantidad_de_monopatines_por_pais();
 			anykey();
 			break;
 		case 5:
