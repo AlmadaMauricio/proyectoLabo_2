@@ -17,6 +17,28 @@
 #include "PagoRenta.h"
 #include "Renta.h"
 
+void instalacionArchivos()
+{
+
+	setBackgroundColor(BLUE);
+	setColor(WHITE);
+	cls();
+
+	checkArchivoUsers();
+	checkArchivoAdmins();
+	checkArchivoRenta();
+	checkArchivoMonopatin();
+
+	checkArchivoPagosRenta();
+
+	checkArchivoPrecioRenta();
+
+
+
+	cout << endl << "\t-- Presione enter para continuar --";
+	system("PAUSE > null");
+	system("cls");
+}
 
 using namespace std;
 using namespace rlutil;
@@ -334,7 +356,7 @@ void menuUsers()
 			menuListadosUsers();
 			break;
 		case 6:
-			//menuConsultasUser();
+			menuConsultasUsers();
 			break;
 		case 0:
 			cout << "¿Volver al menu anterior? (S/N) ";
@@ -398,7 +420,7 @@ void menuListadosUsers()
 	}
 }
 
-void menuConsultasUSers()
+void menuConsultasUsers()
 {
 	int opcion;
 	char confirmarSalida;

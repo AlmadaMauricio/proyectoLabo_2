@@ -1,4 +1,5 @@
 #include "Persona.h"
+#include "User.h"
 
 using namespace std;
 
@@ -36,10 +37,96 @@ bool Persona::getEstado() { return _estado; }
 
 int Persona::CargarPersona()
 {
-	return 0;
+	bool flag = false;
+	int aux;
+	char aux2[40];
+
+	do {
+		cout << "Ingrese el dni (0 para volver al menu anterior): ";
+		cin >> aux;
+
+		if (aux == 0)
+		{
+			return 0;
+		}
+
+		if (aux < 1000000)
+		{
+			cout << " El dni ingresado es incorrecto, intente nuevamente." << endl;
+			flag = false;
+		}
+		else if (buscarUserPorDNI(aux))
+		{
+			cout << "El user ya se encuentra registrado." << endl;
+			flag = false;
+		}
+		else
+		{
+			flag = true;
+		}
+
+	} while (!flag);
+
+	this->setDni(aux);
+
+	cout << "Ingrese el nombre: ";
+	//cin.ignore();
+	//cin.getline(_nombre, 29);
+
+	cin >> aux2;
+	this->setNombre(aux2);
+
+	// Usar metodo set para ingreso	automatizado con 
+	// excel o getline para ingreso manual (comentar uno y descomentar el otro)
+
+	cout << "Ingrese el apellido: ";
+	//cin.getline(aux2, 29);
+
+	cin >> aux2;
+	this->setApellido(aux2);
+
+	// Usar metodo set para ingreso	automatizado con 
+	// excel o getline para ingreso manual (comentar uno y descomentar el otro)
+
+	todoAMayus(aux2);
+	setApellido(aux2);
+
+	cout << "- Ingrese la fecha de nacimiento -" << endl;
+	_fecha_nacimiento.cargarFecha();
+	cout << "- Domicilio -" << endl;
+	_domicilio.cargarDomicilio();
+	cout << "Ingrese email: ";
+	//cin.ignore();
+	//cin.getline(_email, 29);
+
+	cin >> aux2;
+	this->setEmail(aux2);
+
+	// Usar metodo set para ingreso	automatizado con 
+	// excel o getline para ingreso manual (comentar uno y descomentar el otro)
+
+	cout << "Ingrese el telefono: ";
+	cin >> aux2;
+	this->setTelefono(aux2);
+
+	_estado = true;
+
+	return 1;
 }
 
 void Persona::MostrarPersona()
 {
+	if (_estado) {
+		cout << endl << "Dni: " << this->getDni() << endl;
+		cout << "Nombre: " << this->_nombre << endl;
+		cout << "Apellido: " << this->_apellido << endl;
+		cout << "Fecha nacimiento: ";
+		_fecha_nacimiento.mostrarFecha();
+		cout << endl;
+		_domicilio.mostrarDomicilio();
+		cout << endl;
+		cout << "Email : " << this->getEmail() << endl;
+		cout << "Telefono: " << this->getTelefono() << endl;
+	}
 }
 

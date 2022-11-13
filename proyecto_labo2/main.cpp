@@ -4,8 +4,9 @@
 #include "Administrador.h"
 #include "Persona.h"
 #include "Funciones.h"
-#include "User.h"
 #include "Renta.h"
+#include "ValorRenta.h"
+#include "PagoRenta.h"
 
 
 using namespace std;
@@ -44,7 +45,7 @@ int main()
 	aux.cargar();
 	}
 	
-
+	
 	menuPrincipal();
 	
 	Renta aux2;

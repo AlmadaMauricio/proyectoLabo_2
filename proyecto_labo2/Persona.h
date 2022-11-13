@@ -4,6 +4,7 @@
 #include <cstring>
 #include <iostream>
 #include "Fecha.h"
+#include "Funciones.h"
 
 class Persona {
 

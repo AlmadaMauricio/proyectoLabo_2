@@ -2,7 +2,9 @@
 #include "User.h"
 #include "rlutil.h"
 #include "funciones.h"
+#include "ValorRenta.h"
 #include "administrador.h"
+#include "Renta.h"
 
 
 using namespace rlutil;
@@ -162,6 +164,51 @@ void User::cargar() {
 	this->setIduser(generarIDUser() + 1);
 
 	this->setEstado(true);
+
+	//
+
+	int idRenta = generarIdRenta() + 1;
+
+	float valorRenta = getUltimoPrecioRenta();
+
+	PagoRenta rentaInicial(this->getIduser(), valorRenta, idRenta);
+
+	cout << endl << " -- Valor de renta a pagar: $ " << valorRenta << " --" << endl;
+
+	do
+	{
+		cout << endl << "Ingrese el ID de administrador actual: ";
+		cin >> ID;
+
+		if (ID < 1)
+		{
+			cout << "ID inválido. Reintente por favor" << endl;
+			flag2 = false;
+			anykey();
+		}
+		else
+		{
+
+			pos = buscarAdministradorPorID(ID);
+
+			if (pos > -1) {
+				admin.leerDeDisco(pos);
+				rentaInicial.setIdAdmin(admin.getIdAdmin());
+				rentaInicial.grabarEnDisco();
+				flag2 = true;
+			}
+			else
+			{
+				cout << "El ID no fue encontrado en el archivo de administradores" << endl;
+				flag2 = false;
+				anykey();
+			}
+		}
+
+	} while (!flag2);
+
+	//
+
 
 	this->grabarEnDisco();
 
@@ -755,7 +802,7 @@ void listarUserAlfabeticamente() {
 	int cantReg = CantidadRegistrosUser();
 
 	if (cantReg == 0) {
-		cout << "No hay socios registrados";
+		cout << "No hay users registrados";
 		anykey();
 		return;
 	}

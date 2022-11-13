@@ -1,6 +1,7 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
+void instalacionArchivos();
 
 bool login();
 void todoAMayus(char*);
@@ -18,7 +19,7 @@ void mostrarLeyenda();
 // Funciones
 void menuUsers();
 void menuListadosUsers();
-void menuConsultasUSers();
+void menuConsultasUsers();
 
 void menuAdmins();
 void menuListadosAdmin();
