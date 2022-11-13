@@ -133,6 +133,7 @@
     <ClCompile Include="Funciones.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monopatin.cpp" />
+    <ClCompile Include="MonopatinPorPais.cpp" />
     <ClCompile Include="PagoRenta.cpp" />
     <ClCompile Include="Pais.cpp" />
     <ClCompile Include="Persona.cpp" />
@@ -146,6 +147,7 @@
     <ClInclude Include="Fecha.h" />
     <ClInclude Include="Funciones.h" />
     <ClInclude Include="Monopatin.h" />
+    <ClInclude Include="MonopatinPorPais.h" />
     <ClInclude Include="PagoRenta.h" />
     <ClInclude Include="Pais.h" />
     <ClInclude Include="Persona.h" />
