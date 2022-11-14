@@ -3,17 +3,22 @@
 using namespace std;
 using namespace rlutil;
 
-Monopatin::Monopatin(int idMonopatin, const char* modelo, int numSerie, bool estado, int _idPais) {
+Monopatin::Monopatin(int idMonopatin, const char* modelo, int numSerie, bool estado, int _idPais, int idUser) {
 	_idMonopatin = idMonopatin;
 	strcpy(_modelo, modelo);
 	_idPaisFabricacion = _idPais;
 	_numSerie = numSerie;
+	_idUser = idUser;
 	_estado = estado;
 };
 
 void Monopatin::setIdMonopatin(int idMonopatin) {
 	_idMonopatin = idMonopatin;
 };
+void Monopatin::setIdUser(int idUser) {
+	_idUser = idUser;
+};
+
 
 void Monopatin::setModelo(const char* modelo) {
 	strcpy(_modelo, modelo);
@@ -33,6 +38,9 @@ void Monopatin::setEstado(bool estado) {
 
 int Monopatin::getIdMonopatin() {
 	return _idMonopatin;
+};
+int Monopatin::getIdUser() {
+	return _idUser;
 };
 
 const char* Monopatin::getModelo() {

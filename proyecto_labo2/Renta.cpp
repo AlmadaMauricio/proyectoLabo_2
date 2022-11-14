@@ -114,7 +114,12 @@ void Renta::cargarRenta() {
 		}
 		else if (posUser < 0)
 		{
-			cout << "El ID de socio no esta registrado o es incorrecto. Ingrese de nuevo por favor." << endl;
+			cout << "El ID de user no esta registrado o es incorrecto. Ingrese de nuevo por favor." << endl;
+		}
+		else
+		{
+			user.leerDeDisco(posUser);
+			verifica = true;
 		}
 		
 
@@ -123,7 +128,7 @@ void Renta::cargarRenta() {
 	this->setIdUser(aux);
 
 	monoRegistro.cargarMonopatin();
-	//monoRegistro.setIdUser(aux);
+	monoRegistro.setIdUser(aux);
 
 	this->setIdMonopatin(monoRegistro.getIdMonopatin());
 
@@ -165,13 +170,13 @@ void Renta::mostrarRenta() {
 		cout << endl;
 		cout << "Id de Renta: " << this->getIdRenta();
 		cout << endl;
-		cout << "Id del Socio: " << this->getIdUser();
+		cout << "Id del User: " << this->getIdUser();
 		cout << endl;
 		cout << "Id del Administrador: " << this->getIdAdministrador();
 		cout << endl;
 	}
 
-	//Falta mostrar el monopatin de la Renta
+	
 	posMonopatin = buscarMonopatinPorId(this->getIdMonopatin());
 	if (posMonopatin == -1) {
 		cout << "Hubo un error. No se encontró el monopatin de la renta: " << this->getIdRenta();

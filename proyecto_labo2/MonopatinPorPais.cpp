@@ -38,7 +38,7 @@ bool MonopatinPorPais::getEstado()
 
 int cantidadRegPaises()
 {
-	FILE* p = fopen("Monopatines.dat", "rb");
+	FILE* p = fopen("paises.dat", "rb");
 	if (p == NULL) {
 		return 0;
 	}
@@ -69,7 +69,7 @@ void cantidad_de_monopatines_por_pais()
 		return;
 	}
 
-	const int PAISES = 10;
+	const int PAISES = 5;
 	MonopatinPorPais* vPaises = new MonopatinPorPais[cantRegPaises];
 
 	inicializarVecPaises(vPaises, cantRegPaises);

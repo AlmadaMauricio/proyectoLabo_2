@@ -6,11 +6,13 @@
 #include "funciones.h"
 #include "Pais.h"
 #include "rlutil.h"
+#include "User.h"
 
 class Monopatin
 {
 private:
 	int _idMonopatin;
+	int _idUser;
 	char _modelo[30];
 	int _idPaisFabricacion;
 	int _numSerie;
@@ -18,13 +20,14 @@ private:
 
 public:
 
-	Monopatin(int idMonopatin = 0, const char* modelo = "", int numSerie = 0, bool estado = 0, int _idPais = 0);
+	Monopatin(int idMonopatin =0, const char* modelo = "", int numSerie = 0, bool estado = 0, int _idPais = 0, int idUser=0);
 
 	void setIdMonopatin(int idMonopatin);
 	void setModelo(const char* modelo);
 	void setidPaisFabricacion(int _idPaisFabricacion);
 	void setNumSerie(int numSerie);
 	void setEstado(bool estado);
+	void setIdUser(int id);
 
 
 	int getIdMonopatin();
@@ -32,6 +35,7 @@ public:
 	int  getidPaisFabricacion();
 	int getNumSerie();
 	bool getEstado();
+	int getIdUser();
 
 	void cargarMonopatin();
 	void mostrarMonopatin();

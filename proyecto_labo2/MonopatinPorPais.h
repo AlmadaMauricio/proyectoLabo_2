@@ -25,7 +25,7 @@ public:
 	bool getEstado();
 };
 
-int cantidadRegMonopatines();
+int cantidadRegPaises();
 
 void cantidad_de_monopatines_por_pais();
 
