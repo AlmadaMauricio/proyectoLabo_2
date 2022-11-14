@@ -40,7 +40,7 @@ int main()
 
 	} while (flag && flag2);
 
-	
+	/*
 	User aux;
 	for (int i = 0; i < 100; i++)
 	{
@@ -56,7 +56,7 @@ int main()
 		aux2.cargarRenta();
 	}
 	
-	
+	*/
 	
 
 	return 0;
