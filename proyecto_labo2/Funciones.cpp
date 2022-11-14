@@ -21,8 +21,8 @@
 void instalacionArchivos()
 {
 
-	setBackgroundColor(BLUE);
-	setColor(WHITE);
+	setBackgroundColor(BLACK);
+	setColor(GREEN);
 	cls();
 
 	checkArchivoUsers();
@@ -61,7 +61,7 @@ bool login()
 		int opcion;
 		char confirmarSalida;
 		bool salir = false;
-
+		setBackgroundColor(BLACK);
 		setColor(CYAN);
 		cout << "    Bienvenido al Sistema MONOPATIGRES" << endl;
 		cout << "    Ingrese 1: Si usted ya tiene usuario admin y contraseña" << endl;
@@ -72,6 +72,8 @@ bool login()
 		cls();
 
 		switch (opcion) {
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		case 1:
 			cout << "    Bienvenido al Sistema MONOPATIGRES" << endl;
 			cout << "    --------------------------" << endl;
@@ -172,6 +174,7 @@ bool login()
 
 bool menuPrincipal() {
 	setBackgroundColor(BLACK);
+	setColor(CYAN);
 
 	int opcion;
 	char confirmarSalida;
@@ -320,8 +323,8 @@ void menuUsers()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tUsers" << endl;
 		cout << "---------------------------------" << endl;
@@ -374,8 +377,8 @@ void menuListadosUsers()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tListados Users" << endl;
 		cout << "-------------------------------" << endl;
@@ -425,8 +428,8 @@ void menuConsultasUsers()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tConsultas Users" << endl;
 		cout << "-------------------------------" << endl;
@@ -474,8 +477,8 @@ void menuAdmins()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tAdministradores" << endl;
 		cout << "---------------------------------" << endl;
@@ -527,8 +530,8 @@ void menuListadosAdmin()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\t Listados administradores" << endl;
 		cout << "---------------------------------" << endl;
@@ -564,8 +567,8 @@ void menuRentas()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tRentas" << endl;
 		cout << "---------------------------------" << endl;
@@ -614,18 +617,15 @@ void menuListadosRentas()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tListados Rentas" << endl;
 		cout << "-------------------------------------------------" << endl;
 		cout << "    1 - Listar todas las Rentas" << endl;
-		cout << "    2 - Listar solicitudes por ID de user" << endl;
-		cout << "    3 - Listar Solicitudes por orden descendente" << endl;
-		cout << "    4 - Listar Solicitudes por fecha Descendente" << endl;
-		cout << "    5 - Listar Solicitudes aprobadas" << endl;
-		cout << "    6 - Listar Solicitudes pendientes" << endl;
-		cout << "    7 - Listar Solicitudes desaprobadas" << endl;
+		cout << "    2 - Listar Rentas por ID de user" << endl;
+		cout << "    3 - Listar Rentas por orden descendente" << endl;
+		cout << "    4 - Listar Rentas por fecha Descendente" << endl;
 		cout << "--------------------------------------------------" << endl;
 		cout << "0 - Volver al menú principal" << endl << endl;
 
@@ -651,18 +651,6 @@ void menuListadosRentas()
 			listarRentaPorFechaDesc();
 			anykey();
 			break;
-		case 5:
-			listadoRentasAprobadas();
-			anykey();
-			break;
-		case 6:
-			listadoRentasPendientes();
-			anykey();
-			break;
-		case 7:
-			listadoRentasDesaprobadas();
-			anykey();
-			break;
 		case 0:
 			cout << "¿Volver al menu anterior? (S/N) ";
 			cin >> confirmarSalida;
@@ -681,8 +669,8 @@ void menuConsultasRentas()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tConsultas Rentas" << endl;
 		cout << "-------------------------------------------------" << endl;
@@ -699,15 +687,15 @@ void menuConsultasRentas()
 
 		switch (opcion) {
 		case 1:
-			//consultaRentasPorId();
+			consultaRentasPorId();
 			anykey();
 			break;
 		case 2:
-			//consultaRentasPorFecha();
+			consultaRentasPorFecha();
 			anykey();
 			break;
 		case 3:
-			//consultaRentasPorAnio();
+			consultaRentasPorAnio();
 			anykey();
 			break;
 		case 0:
@@ -728,8 +716,8 @@ void menuMonopatines()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 
 		cout << "\tMonopatines" << endl;
@@ -774,8 +762,8 @@ void menuListadosMonopatines()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tListados Monopatines" << endl;
 		cout << "----------------------------------" << endl;
@@ -818,8 +806,8 @@ void menuConsultasMonopatines()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\tConsultas Monopatines" << endl;
 		cout << "-----------------------------------------------" << endl;
@@ -866,8 +854,8 @@ void menuInformes()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\t\t\t\tInformes" << endl;
 		cout << "-----------------------------------------------------------------" << endl;
@@ -875,12 +863,10 @@ void menuInformes()
 		cout << "    2 - Recaudación por user" << endl;
 		cout << "    3 - Recaudación por administrador" << endl;
 		cout << "    4 - Cantidad de monopatines por pais " << endl;
-		cout << "    5 - Cantidad de monopatines por modelo" << endl;
-		cout << "    6 - Cantidad de rentas aprobadas por año" << endl;
-		cout << "    7 - Cantidad de rentas desaprobadas por año" << endl;
-	
+		cout << "    5 - Cantidad de rentas aprobadas por año" << endl;
+		cout << "    6 - Cantidad de rentas desaprobadas por año" << endl;
 		cout << "-----------------------------------------------------------------" << endl;
-		cout << "   8 - Listar historial de precios de renta" << endl;
+		cout << "    7 - Listar historial de precios de renta" << endl;
 		cout << "-----------------------------------------------------------------" << endl;
 		cout << "0 - Volver al menú principal" << endl << endl;
 
@@ -904,18 +890,14 @@ void menuInformes()
 			anykey();
 			break;
 		case 5:
-			//cantidad_monopatines_por_modelo();??????
-			anykey();
-			break;
-		case 6:
 			cantidad_rentas_aprobadas_por_anio();
 			anykey();
 			break;
-		case 7:
+		case 6:
 			cantidad_rentas_desap_por_anio();
 			anykey();
 			break;
-		case 8:
+		case 7:
 			listar_historial_precios_renta();
 			break;
 		case 0:
@@ -937,8 +919,8 @@ void menuConfiguracion()
 
 	while (!salir) {
 
-		setColor(WHITE);
-		setBackgroundColor(DARKGREY);
+		setBackgroundColor(BLACK);
+		setColor(CYAN);
 		cls();
 		cout << "\t\tConfiguraciones" << endl;
 		cout << "-----------------------------------------------" << endl;

@@ -209,7 +209,7 @@ bool Renta::grabarEnDisco() {
 	return escribio;
 }
 bool Renta::leerDeDisco(int pos) {
-	FILE* fReg = fopen("renta.dat", "rb");
+	FILE* fReg = fopen("rentas.dat", "rb");
 	if (fReg == NULL) {
 		cout << "No se puede abrir el archivo.";
 		return false;

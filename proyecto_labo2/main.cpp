@@ -18,9 +18,10 @@ int main()
 
 	bool flag = false;
 	bool flag2 = false;
-
-	mostrarLogo();
+	setBackgroundColor(BLACK);
+	setColor(CYAN);
 	instalacionArchivos();
+	mostrarLogo();
 	mostrarLeyenda();
 	mostrarIntegrantes();
 
