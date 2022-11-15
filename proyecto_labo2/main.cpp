@@ -31,7 +31,7 @@ int main()
 	cout << endl;
 	do
 	{
-		flag = login();
+		//flag = login();
 
 		if (flag)
 		{
