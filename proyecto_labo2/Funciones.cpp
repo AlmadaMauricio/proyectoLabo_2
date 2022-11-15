@@ -952,14 +952,14 @@ void menuConfiguracion()
 			backup_rentas();
 			anykey();
 			break;
+		case 4:
+			exportarCSVUsers();
+			break;
+		case 5:
+			exportarCSVRentas();
+			break;
 		case 6:
-			//exportarCSVUsers();
-			break;
-		case 7:
-			//exportarCSVRentas();
-			break;
-		case 8:
-			//exportarCSVMonopatines();
+			exportarCSVMonopatines();
 			break;
 		case 0:
 			cout << "¿Volver al menu anterior? (S/N) ";
@@ -974,15 +974,108 @@ void menuConfiguracion()
 
 bool exportarCSVUsers()
 {
-	return false;
+	ofstream myFile;
+	myFile.open("listadoUsers.csv");
+
+	FILE* p = fopen("users.dat", "rb");
+
+	User reg;
+
+	if (p == NULL) {
+		cout << "No se pudo abrir el archivo";
+		return false;
+	}
+
+	int pos = 0;
+
+	myFile << "ID USER" << ';' << "DNI" << ';' << "APELLIDO" << ';' << "NOMBRE" << ';' << "FECHA INGRESO" << endl;
+	
+	//Variable para fecha de ingreso
+	string fecha2;
+
+	while (reg.leerDeDisco(pos++)) {
+		
+		fecha2 = reg.getFechaIngreso().toString();
+
+		myFile << reg.getIduser() << ';' << reg.getDni() << ';' << reg.getApellido() << ';' << reg.getNombre() << ';' << fecha2 << endl;
+	}
+
+	cout << "Listado 'listadoUsers.csv' exportado correctamente" << endl;
+	system("pause");
+	system("cls");
+
+	
+
+	return true;
 }
 
 bool exportarCSVRentas()
 {
-	return false;
+	ofstream myFile;
+	myFile.open("listadoRentas.csv");
+
+	FILE* p = fopen("rentas.dat", "rb");
+	Renta reg;
+
+	if (p == NULL) {
+		cout << "No se pudo abrir el archivo";
+		return false;
+	}
+
+	int pos = 0;
+
+	myFile << "ID RENTA" << ';' << "ID ADMIN" << ';' << "ID USER" << ';' << "ID MONOPATIN" << ';' << "FECHA INICIO" <<  endl;
+
+	string fecha;
+	string estado;
+
+	while (reg.leerDeDisco(pos++)) {
+		fecha = reg.getFechaRenta().toString();
+
+		myFile << reg.getIdRenta() << ';' << reg.getIdAdministrador() << ';' << reg.getIdUser() << ';' << reg.getIdMonopatin() << ';' << fecha << endl;
+	}
+
+	cout << "Listado 'listadoRentas.csv' exportado correctamente" << endl;
+	system("pause");
+	system("cls");
+
+
+	return true;
 }
 
 bool exportarCSVMonopatines()
 {
-	return false;
+	ofstream myFile;
+	myFile.open("listadoMonopatines.csv");
+
+	FILE* p = fopen("armas.dat", "rb");
+	Monopatin reg;
+
+	if (p == NULL) {
+		cout << "No se pudo abrir el archivo";
+		return false;
+	}
+
+	int pos = 0;
+
+	myFile << "ID MONOPATIN" << ',' << "MODELO" << ',' << "ID PAIS" << ',' << "NUM SERIE" << endl;
+
+	string modelo;
+
+
+	while (reg.leerDeDisco(pos++)) {
+
+		modelo = reg.getModelo();
+
+		myFile << reg.getIdMonopatin() << ',' << modelo << ',' << reg.getidPaisFabricacion() << ',' << reg.getNumSerie() << endl;
+	}
+
+	cout << "Listado 'listadoMonopatines.csv' exportado correctamente" << endl;
+	system("pause");
+	system("cls");
+
+
+	fclose(p);
+
+	return true;
 }

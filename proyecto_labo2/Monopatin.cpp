@@ -140,7 +140,7 @@ void Monopatin::cargarMonopatin()
 
 	this->mostrarMonopatin();
 
-}
+};
 void Monopatin::mostrarMonopatin()
 {
 	cout << "Id del Monopatin: " << this->getIdMonopatin();
