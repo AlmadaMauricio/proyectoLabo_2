@@ -54,6 +54,9 @@
     <ClCompile Include="MonopatinPorPais.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="recaudacionesPorAdmin.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fecha.h">
@@ -90,6 +93,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="MonopatinPorPais.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="recaudacionesPorAdmin.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

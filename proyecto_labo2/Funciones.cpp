@@ -17,6 +17,7 @@
 #include "PagoRenta.h"
 #include "Renta.h"
 #include "MonopatinPorPais.h"
+#include "recaudacionesPorAdmin.h"
 
 void instalacionArchivos()
 {
@@ -877,13 +878,13 @@ void menuInformes()
 
 		switch (opcion) {
 		case 1:
-			//Informe_Recaudacion_Anual();
+			Informe_Recaudacion_Anual();
 			break;
 		case 2:
-			//recaudacionPorUser();
+			recaudacionPorUser();
 			break;
 		case 3:
-			//recaudacionPorAdmin();
+			recaudacionPorAdmin();
 			break;
 		case 4:
 			cantidad_de_monopatines_por_pais();

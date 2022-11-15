@@ -137,6 +137,7 @@
     <ClCompile Include="PagoRenta.cpp" />
     <ClCompile Include="Pais.cpp" />
     <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="recaudacionesPorAdmin.cpp" />
     <ClCompile Include="Renta.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="ValorRenta.cpp" />
@@ -151,6 +152,7 @@
     <ClInclude Include="PagoRenta.h" />
     <ClInclude Include="Pais.h" />
     <ClInclude Include="Persona.h" />
+    <ClInclude Include="recaudacionesPorAdmin.h" />
     <ClInclude Include="Renta.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="ValorRenta.h" />
