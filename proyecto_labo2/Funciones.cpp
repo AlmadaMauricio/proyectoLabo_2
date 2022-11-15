@@ -1045,7 +1045,7 @@ bool exportarCSVMonopatines()
 	ofstream myFile;
 	myFile.open("listadoMonopatines.csv");
 
-	FILE* p = fopen("armas.dat", "rb");
+	FILE* p = fopen("monopatines.dat", "rb");
 	Monopatin reg;
 
 	if (p == NULL) {
