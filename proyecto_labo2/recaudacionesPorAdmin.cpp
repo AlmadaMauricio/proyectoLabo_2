@@ -245,7 +245,7 @@ void MostrarDetalleRecaudacionAnual(float* vec, int tam) {
 	cout << "-------------------------------------------------" << endl;
 	cout << setw(12) << "Total año";
 	cout << setw(1) << "$";
-	cout << setw(15) << (long)totalAnio;
+	cout << setw(15) << (long)totalAnio << endl;
 	cout << "-------------------------------------------------" << endl;
 	cout << setw(21) << "Total recaudado";
 	cout << setw(1) << "$";
