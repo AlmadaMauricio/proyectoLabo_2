@@ -30,12 +30,8 @@ void instalacionArchivos()
 	checkArchivoAdmins();
 	checkArchivoRenta();
 	checkArchivoMonopatin();
-
 	checkArchivoPagosRenta();
-
 	checkArchivoPrecioRenta();
-
-
 
 	cout << endl << "\t-- Presione enter para continuar --";
 	system("PAUSE > null");
