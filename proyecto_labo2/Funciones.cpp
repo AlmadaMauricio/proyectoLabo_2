@@ -1018,7 +1018,7 @@ bool exportarCSVRentas()
 		cout << "No se pudo abrir el archivo";
 		return false;
 	}
-
+	
 	int pos = 0;
 
 	myFile << "ID RENTA" << ';' << "ID ADMIN" << ';' << "ID USER" << ';' << "ID MONOPATIN" << ';' << "FECHA INICIO" <<  endl;
