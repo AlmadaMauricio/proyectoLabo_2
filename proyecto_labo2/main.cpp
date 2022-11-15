@@ -31,7 +31,7 @@ int main()
 	cout << endl;
 	do
 	{
-		flag = login();
+		//flag = login();
 
 		if (flag)
 		{
@@ -46,9 +46,9 @@ int main()
 	{
 	aux.cargar();
 	}
+	*/
 	
-	
-	menuPrincipal();
+	//menuPrincipal();
 	
 	Renta aux2;
 	for (int i = 0; i < 100; i++)
@@ -56,7 +56,7 @@ int main()
 		aux2.cargarRenta();
 	}
 	
-	*/
+	
 	
 
 	return 0;
