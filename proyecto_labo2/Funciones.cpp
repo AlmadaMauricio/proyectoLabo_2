@@ -239,6 +239,7 @@ bool menuPrincipal() {
 			salir = (tolower(confirmarSalida) == 's');
 			return false;
 		}
+
 	}
 	return true;
 }
